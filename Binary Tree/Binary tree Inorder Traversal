@@ -1,0 +1,10 @@
+void inorder(struct node *root)
+{
+if(root == 0)
+{
+return;
+}
+inorder(root->left)
+printf("%d",root->data)
+inorder(root->right)
+}
