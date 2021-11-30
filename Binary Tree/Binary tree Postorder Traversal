@@ -1,0 +1,10 @@
+void postorder(struct node *root)
+{
+if(root==0)
+{
+return;
+}
+postorder(root->left);
+postorder(root->right);
+printf("%d",root->data);
+}
