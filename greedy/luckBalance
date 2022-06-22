@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main(){
+    vector<int> arr;
+int n,i,k,balance=0,count=0;
+cin>>n>>k;
+int luck,imp;
+for(i=0;i<n;i++)
+{
+    cin>>luck>>imp;
+
+if(imp)
+{
+    arr.push_back(luck);
+    count++;
+}
+balance+=luck;
+}
+
+sort(arr.begin(),arr.end());
+int sub=0;
+for(i=0;i<(count-k);i++)
+{
+sub+=arr[i];
+}
+cout<<balance-2*sub;
+
+return 0;
+}
